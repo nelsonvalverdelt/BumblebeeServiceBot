@@ -1,0 +1,12 @@
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\bin\Debug\netcoreapp2.0\BumblebeeServiceBot.bot
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\bin\Debug\netcoreapp2.0\EchoBotWithCounter.deps.json
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\bin\Debug\netcoreapp2.0\EchoBotWithCounter.runtimeconfig.json
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\bin\Debug\netcoreapp2.0\EchoBotWithCounter.runtimeconfig.dev.json
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\bin\Debug\netcoreapp2.0\EchoBotWithCounter.dll
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\bin\Debug\netcoreapp2.0\EchoBotWithCounter.pdb
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\obj\Debug\netcoreapp2.0\EchoBotWithCounter.csprojAssemblyReference.cache
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\obj\Debug\netcoreapp2.0\EchoBotWithCounter.csproj.CoreCompileInputs.cache
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\obj\Debug\netcoreapp2.0\EchoBotWithCounter.AssemblyInfoInputs.cache
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\obj\Debug\netcoreapp2.0\EchoBotWithCounter.AssemblyInfo.cs
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\obj\Debug\netcoreapp2.0\EchoBotWithCounter.dll
+C:\Users\nelso\Downloads\BumblebeeServiceBot-src\obj\Debug\netcoreapp2.0\EchoBotWithCounter.pdb
