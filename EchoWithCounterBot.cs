@@ -1,9 +1,11 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using EchoBotWithCounter.Dialogs;
+using EchoBotWithCounter.Helpers;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
 using Microsoft.Bot.Schema;
@@ -25,9 +27,10 @@ namespace Microsoft.BotBuilderSamples
     public class EchoWithCounterBot : IBot
     {
         public EchoBotAccessors EchoBotAccessors { get; }
-        private readonly DialogSet dialogs;
-        private readonly ILogger _logger;
 
+        private readonly DialogSet _dialogSet;
+        private readonly ILogger _logger;
+        public string Uri { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EchoWithCounterBot"/> class.
         /// </summary>
@@ -36,9 +39,10 @@ namespace Microsoft.BotBuilderSamples
         /// <seealso cref="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/?view=aspnetcore-2.1#windows-eventlog-provider"/>
         public EchoWithCounterBot(EchoBotAccessors accessors, ILoggerFactory loggerFactory)
         {
+           
             if (loggerFactory == null)
             {
-                throw new System.ArgumentNullException(nameof(loggerFactory));
+                throw new ArgumentNullException(nameof(loggerFactory));
             }
 
             _logger = loggerFactory.CreateLogger<EchoWithCounterBot>();
@@ -48,16 +52,18 @@ namespace Microsoft.BotBuilderSamples
             var dialogState = accessors.DialogState;
 
             //// compose dialogs
-            dialogs = new DialogSet(dialogState);
-            dialogs.Add(PrincipalDialog.Instance);
+            _dialogSet = new DialogSet(dialogState);
+            _dialogSet.Add(PrincipalDialog.Instance);
 
 
             //Prompts
-            dialogs.Add(new ChoicePrompt("choicePrompt"));
-            dialogs.Add(new TextPrompt("textPrompt"));
-            dialogs.Add(new NumberPrompt<int>("numberPrompt"));
+            _dialogSet.Add(new ChoicePrompt("choicePrompt"));
+            _dialogSet.Add(new TextPrompt("textPrompt"));
+            _dialogSet.Add(new NumberPrompt<int>("numberPrompt"));
 
-            EchoBotAccessors = accessors ?? throw new System.ArgumentNullException(nameof(accessors));
+            EchoBotAccessors = accessors ?? throw new ArgumentNullException(nameof(accessors));
+
+           
         }
 
         /// <summary>
@@ -75,6 +81,7 @@ namespace Microsoft.BotBuilderSamples
         /// <seealso cref="IMiddleware"/>
         public async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken = default(CancellationToken))
         {
+            
             // Handle Message activity type, which is the main activity type for shown within a conversational interface
             // Message activities may contain text, speech, interactive cards, and binary or unknown attachments.
             // see https://aka.ms/about-bot-activity-message to learn more about the message and other activity types
@@ -85,7 +92,7 @@ namespace Microsoft.BotBuilderSamples
 
                 turnContext.TurnState.Add("EchoBotAccessors", EchoBotAccessors);
 
-                var dialogCtx = await dialogs.CreateContextAsync(turnContext, cancellationToken);
+                var dialogCtx = await _dialogSet.CreateContextAsync(turnContext, cancellationToken);
 
                 if (dialogCtx.ActiveDialog == null)
                 {

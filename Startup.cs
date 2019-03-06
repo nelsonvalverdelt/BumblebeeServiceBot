@@ -4,8 +4,10 @@
 using System;
 using System.IO;
 using System.Linq;
+using EchoBotWithCounter.Helpers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.BotFramework;
 using Microsoft.Bot.Builder.Dialogs;
@@ -58,6 +60,9 @@ namespace Microsoft.BotBuilderSamples
         /// <seealso cref="https://docs.microsoft.com/en-us/azure/bot-service/bot-service-manage-channels?view=azure-bot-service-4.0"/>
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<IConfiguracionGlobal, ConfiguracionGlobal>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddBot<EchoWithCounterBot>(options =>
             {
                 // Creates a logger for the application to use.

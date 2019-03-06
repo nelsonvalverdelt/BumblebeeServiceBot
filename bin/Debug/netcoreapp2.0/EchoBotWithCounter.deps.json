@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "b61ebc3b7cb3acb883fc098de2312b0b0bc9fb39"
+    "signature": "4097f4208e82fd7073317972b817cbe3b2b7f609"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "EchoBotWithCounter/1.0.0": {
         "dependencies": {
           "AsyncUsageAnalyzers": "1.0.0-alpha003",
+          "LocalStorage": "2.0.0-beta-2",
           "Microsoft.AspNetCore": "2.1.3",
           "Microsoft.AspNetCore.All": "2.0.8",
           "Microsoft.Bot.Builder": "4.1.5",
@@ -90,6 +91,20 @@
             "assetType": "native",
             "fileVersion": "0.0.0.0"
           }
+        }
+      },
+      "LocalStorage/2.0.0-beta-2": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/netstandard2.0/LocalStorage.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/LocalStorage.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.4.0": {
@@ -4811,6 +4826,13 @@
       "sha512": "sha512-zisTbxitzki256+rKY0myI2T1yLyO9+qAU8P+FXkd8Dv0Iymk484Y9SbwUlyL3igF/bpiCv7SCdv349rN/JbfQ==",
       "path": "libuv/1.10.0",
       "hashPath": "libuv.1.10.0.nupkg.sha512"
+    },
+    "LocalStorage/2.0.0-beta-2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cBwYwO8r/g5wOnw8nEkgKXO6HBCvuCrT2Wi8rXOhrx4sLUyXTyAvrUTvjnJpH8RX4sH2JC24dlL6CCLO4zLRXA==",
+      "path": "localstorage/2.0.0-beta-2",
+      "hashPath": "localstorage.2.0.0-beta-2.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights/2.4.0": {
       "type": "package",
