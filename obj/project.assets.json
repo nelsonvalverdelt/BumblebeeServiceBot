@@ -13564,11 +13564,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nelso\\Downloads\\BumblebeeServiceBot-src\\EchoBotWithCounter.csproj",
+      "projectUniqueName": "D:\\Projects\\BumblebeeServiceBot-src\\EchoBotWithCounter.csproj",
       "projectName": "EchoBotWithCounter",
-      "projectPath": "C:\\Users\\nelso\\Downloads\\BumblebeeServiceBot-src\\EchoBotWithCounter.csproj",
+      "projectPath": "D:\\Projects\\BumblebeeServiceBot-src\\EchoBotWithCounter.csproj",
       "packagesPath": "C:\\Users\\nelso\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nelso\\Downloads\\BumblebeeServiceBot-src\\obj\\",
+      "outputPath": "D:\\Projects\\BumblebeeServiceBot-src\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
